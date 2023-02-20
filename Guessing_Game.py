@@ -45,13 +45,17 @@ while exit == False:
         number = 3
         
         # creating an input to the user put the number 
-        guess = int(input("Input your number from 1 to 10(Input 0 if you want to exit): "))
+        guess = input("Input your number from 1 to 10(Input exit if you want to leave): ")
+        
         
         # defining the exit command
-        if guess == 0: 
+        if guess == "exit": 
             exit = True
             print("Exiting the Game...")
             break
+        else:
+            guess = int(guess)
+        
         
         # defining the variables that will be used in the conditionals
         right = number == guess and 0 < guess <= 10 
@@ -62,7 +66,7 @@ while exit == False:
         time.sleep(0.5)
 
         # printing the number that the user guessed to confirm and thriller
-        if guess > 0: print(f"You Guessed the number {guess}...")
+        if -1 >= guess > 0: print(f"You Guessed the number {guess}...")
         # you can use the f before the "", and then in the {} you put the variable that you want
         # that's to save time and to make less and prettier code
 
@@ -84,7 +88,7 @@ while exit == False:
         elif higher:
             print(f"You failed! The number was {number}, your guess was higher than that.")
             life -= 1
-        elif guess > 10:
+        elif -1 >= guess > 10:
             print(f"The number {guess} isn't betwen 1 and 10.")
             chance -= 1
             
