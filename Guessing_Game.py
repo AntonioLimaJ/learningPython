@@ -49,6 +49,7 @@ while exit == False:
     print("****************************")
     
     # creating a conditional to see if the guessed number was right and printing it
+    # this conditional add or remove points too
     if right:
         print(f"You found it! The number was {number}.") 
         point += 1
