@@ -15,17 +15,25 @@ point = 0
 # Set the amount of lifes
 life = 0
 
-# Put the choice of the difficulty
-in_difficulty = int(input("Chose the difficulty(1 to easy, 2 to medium and 3 to hard): "))
+# Set the while conditional
+ex_difficulty = False
 
 # Set the lifes to each difficulty
-if in_difficulty == 1: 
-    life += 5
-elif in_difficulty == 2: 
-    life += 3
-elif in_difficulty == 3: 
-    life += 1
-else: print(f"The number {in_difficulty} isn't a difficulty.")
+while ex_difficulty == False:
+    
+    # Put the choice of the difficulty
+    in_difficulty = int(input("Chose the difficulty(1 to easy, 2 to medium and 3 to hard): "))
+    
+    if in_difficulty == 1: 
+        life += 5
+        ex_difficulty = True
+    elif in_difficulty == 2: 
+        life += 3
+        ex_difficulty = True
+    elif in_difficulty == 3: 
+        life += 1
+        ex_difficulty = True
+    else: print(f"The number {in_difficulty} isn't a difficulty.")
 
 # Creating a while structure so the user can quit it
 while exit == False:
@@ -68,7 +76,7 @@ while exit == False:
         # that's to save time and to make less and prettier code
 
         # another time for thriller
-        time.sleep(1.4)
+        time.sleep(1)
 
         # Creating a delimitation on the answer
         print("****************************")
