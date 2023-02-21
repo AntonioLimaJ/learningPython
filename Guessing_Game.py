@@ -59,16 +59,16 @@ while exit == False:
         right = number == guess and 1 <= guess <= 10 
         higher = number < guess and 1 <= guess <= 10
         lower = number > guess and 1 <= guess <= 10
-
-        time.sleep(0.2)
         
+        time.sleep(0.2)
+
         # printing the number that the user guessed to confirm and thriller
         print(f"You Guessed the number {guess}...")
         # you can use the f before the "", and then in the {} you put the variable that you want
         # that's to save time and to make less and prettier code
 
         # another time for thriller
-        time.sleep(1)
+        time.sleep(1.4)
 
         # Creating a delimitation on the answer
         print("****************************")
