@@ -47,7 +47,6 @@ while exit == False:
         # creating an input to the user put the number 
         guess = input("Input your number from 1 to 10(Input exit if you want to leave): ")
         
-        
         # defining the exit command
         if guess == "exit": 
             exit = True
@@ -56,22 +55,20 @@ while exit == False:
         else:
             guess = int(guess)
         
-        
         # defining the variables that will be used in the conditionals
-        right = number == guess and 0 < guess <= 10 
-        higher = number < guess and 0 < guess <= 10
-        lower = number > guess and 0 < guess <= 10
-        
-        # creating a time for thriller
-        time.sleep(0.5)
+        right = number == guess and 1 <= guess <= 10 
+        higher = number < guess and 1 <= guess <= 10
+        lower = number > guess and 1 <= guess <= 10
 
+        time.sleep(0.2)
+        
         # printing the number that the user guessed to confirm and thriller
-        if -1 >= guess > 0: print(f"You Guessed the number {guess}...")
+        print(f"You Guessed the number {guess}...")
         # you can use the f before the "", and then in the {} you put the variable that you want
         # that's to save time and to make less and prettier code
 
         # another time for thriller
-        time.sleep(1.4)
+        time.sleep(1)
 
         # Creating a delimitation on the answer
         print("****************************")
@@ -88,7 +85,7 @@ while exit == False:
         elif higher:
             print(f"You failed! The number was {number}, your guess was higher than that.")
             life -= 1
-        elif -1 >= guess > 10:
+        else:
             print(f"The number {guess} isn't betwen 1 and 10.")
             chance -= 1
             
